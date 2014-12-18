@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2014-12-18 16:38:27
-categories: blog
+categories: jekyll
 ---
 
 
