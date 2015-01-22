@@ -32,8 +32,9 @@
     }
     &:hover {
         text-decoration: none;
-        color: $light-grey-color;
+        color: $grey-color;
         span{
+            color: $grey-color-light;
             color: #e8e8e8 !important;
         }
     }
