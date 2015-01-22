@@ -5,8 +5,7 @@ jQuery(document).ready(function(){
 });
 
 jQuery.fn.parallax = function(strength) {
-    var scroll_top = $(window).scrollTop();
+    var scroll_top = jQuery(window).scrollTop();
     var move_value = Math.round(scroll_top * strength);
-    this.css('background-position-y', '-'+ move_value +'px');
+    jQuery(this).css('background-position', '0 ' + parseInt(move_value * -1) + 'px');
 };
-

@@ -1,27 +1,15 @@
 ---
-layout: default
+layout: page
 ---
+<div >
 
-<div class="home">
+    {% for post in site.posts %}
+        <h1 class="post-title">
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h1>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        {{ post.excerpt }}
+    {% endfor %}
 
-<p>Tousled cornhole biodiesel keffiyeh chambray, hashtag 8-bit selvage aesthetic tofu lomo Tumblr McSweeney's. Chillwave listicle drinking vinegar fingerstache food truck. Tote bag banh mi distillery, 8-bit brunch flexitarian pickled meditation chia Tumblr meh keffiyeh. Mlkshk pork belly PBR cardigan, street art post-ironic selfies synth gentrify roof party hella heirloom authentic blog. Thundercats Godard authentic, Truffaut chillwave wayfarers irony seitan YOLO meditation gentrify. IPhone viral meggings, craft beer tattooed post-ironic retro Tumblr Intelligentsia vinyl chia. Selfies migas keytar, wayfarers farm-to-table photo booth umami roof party shabby chic jean shorts irony Etsy Godard.</p>
-
-<p>Hella direct trade tilde Kickstarter, occupy heirloom meh Bushwick deep v cardigan sriracha American Apparel Odd Future pour-over. Blog fashion axe banh mi, swag bespoke Banksy locavore direct trade. Butcher fanny pack Thundercats viral. Flannel roof party sartorial deep v. VHS messenger bag before they sold out forage, art party pop-up fap gentrify freegan. Organic fingerstache McSweeney's, normcore farm-to-table wolf cliche Tumblr Portland art party hella sustainable YOLO ennui. Cliche mumblecore keytar ugh kale chips wayfarers flexitarian, crucifix 8-bit.</p>
-
-<p>Deep v pickled synth Echo Park, selfies stumptown distillery Banksy next level occupy Wes Anderson church-key banh mi. Polaroid YOLO Marfa, taxidermy biodiesel craft beer leggings fingerstache lomo Helvetica stumptown PBR&B. Keytar blog PBR&B, mumblecore XOXO Thundercats slow-carb aesthetic seitan. Cray pickled flexitarian, cred stumptown tote bag occupy mixtape wolf. Kogi Blue Bottle before they sold out irony, cred tattooed disrupt meggings roof party master cleanse XOXO. Tousled McSweeney's before they sold out selvage Brooklyn, ennui deep v organic normcore Banksy direct trade twee Neutra banjo. Brunch PBR&B church-key Godard Shoreditch before they sold out Blue Bottle 3 wolf moon banh mi, stumptown biodiesel gastropub deep v McSweeney's.</p>
-
-<p>Synth banh mi raw denim cred. Chia tousled Wes Anderson, Intelligentsia put a bird on it art party cliche ennui vinyl locavore. Portland occupy keffiyeh retro, Helvetica XOXO mlkshk pickled synth trust fund wayfarers aesthetic. Quinoa Truffaut roof party ethical, McSweeney's XOXO Brooklyn ennui art party vinyl chillwave cornhole. Cardigan High Life skateboard Marfa, disrupt dreamcatcher pork belly Truffaut PBR&B Shoreditch. Post-ironic distillery before they sold out gentrify. American Apparel food truck Schlitz hella DIY bespoke.</p>
-
-<p>Gastropub brunch messenger bag McSweeney's craft beer. Tilde gentrify church-key, Blue Bottle meditation XOXO biodiesel typewriter farm-to-table health goth try-hard. IPhone drinking vinegar disrupt chambray. VHS plaid sustainable selfies. Swag irony fixie roof party migas deep v Bushwick Kickstarter Austin Thundercats, chillwave mlkshk vinyl cronut. Stumptown leggings slow-carb ennui, literally synth meggings pork belly keytar vegan brunch letterpress hoodie. Cliche drinking vinegar fingerstache, VHS stumptown letterpress cold-pressed fanny pack pop-up actually readymade church-key photo booth Carles beard.</p>
-
-<p>Scenester Truffaut fap, Marfa Carles typewriter leggings paleo Shoreditch lo-fi swag twee PBR&B mlkshk. Intelligentsia slow-carb skateboard narwhal try-hard. Pop-up DIY lomo selvage, listicle migas single-origin coffee dreamcatcher umami jean shorts Helvetica ethical. Carles chillwave butcher Williamsburg, seitan food truck semiotics master cleanse pour-over sustainable YOLO. Vegan flexitarian locavore deep v Tumblr blog. Vice kogi beard, cred Pitchfork dreamcatcher McSweeney's VHS. Ennui pork belly banh mi cold-pressed stumptown, fingerstache biodiesel McSweeney's retro chillwave sartorial Vice roof party.</p>
-
-<p>Intelligentsia XOXO letterpress selfies. Photo booth farm-to-table gluten-free food truck freegan, American Apparel blog lo-fi. Kale chips selvage pug squid, photo booth Wes Anderson Thundercats small batch fanny pack tousled actually organic listicle. Chillwave distillery put a bird on it, hella hoodie High Life aesthetic Shoreditch actually. Tote bag Vice cred, photo booth YOLO keffiyeh next level McSweeney's Shoreditch cray scenester cronut aesthetic gentrify forage. Sustainable lomo paleo quinoa tote bag, PBR cold-pressed. Art party asymmetrical actually Intelligentsia hashtag Williamsburg readymade.</p>
-
-<p>Aesthetic Thundercats hella, fap sartorial farm-to-table cronut tousled sustainable. McSweeney's forage pickled, bicycle rights vegan disrupt Austin narwhal Etsy semiotics whatever aesthetic fixie umami. Pop-up banh mi put a bird on it, artisan blog butcher Neutra Marfa 8-bit mustache tote bag you probably haven't heard of them health goth plaid mumblecore. Banh mi beard Godard ennui, literally tilde stumptown. Lumbersexual listicle ethical cardigan small batch, Thundercats ugh. Twee church-key skateboard cred, street art crucifix Thundercats chambray trust fund. Quinoa Neutra banh mi selvage.</p>
-
-<p>Messenger bag letterpress flannel, jean shorts sustainable four dollar toast chillwave keytar bicycle rights Truffaut Thundercats sriracha. Biodiesel American Apparel organic Intelligentsia. Before they sold out next level small batch, art party Schlitz wolf lo-fi ennui cray dreamcatcher swag 3 wolf moon. Roof party typewriter before they sold out selvage paleo keytar, ethical Thundercats forage cred salvia McSweeney's. Fingerstache lomo kale chips try-hard Truffaut. Tumblr asymmetrical flannel gastropub Austin keytar, banh mi Helvetica ennui. Umami four dollar toast twee artisan single-origin coffee Bushwick vegan, retro Pinterest sustainable pour-over migas kogi.</p>
-
-<p>Fanny pack pour-over crucifix plaid, Thundercats mixtape American Apparel typewriter. Readymade viral heirloom Pitchfork narwhal. Photo booth Etsy biodiesel trust fund craft beer letterpress. Health goth Neutra Vice narwhal, biodiesel cold-pressed kogi squid Pitchfork. Disrupt selvage freegan blog irony. Normcore American Apparel before they sold out raw denim, cardigan Vice Schlitz pop-up. Tilde crucifix taxidermy banjo 90's viral.</p>
-
+   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 </div>
