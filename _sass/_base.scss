@@ -80,7 +80,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    font-family: $roboto-slab;
 }
 
 
@@ -89,15 +89,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $link-color;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: darken($link-color, 15%);
     }
 
     &:hover {
-        color: $text-color;
+        color: lighten($link-color, 5%);
         text-decoration: underline;
     }
 }
@@ -128,9 +128,9 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
+    border: 1px solid $link-color;
     border-radius: 3px;
-    background-color: #eef;
+    background-color: #FFF5EE;
 }
 
 code {
@@ -198,7 +198,7 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey-color;
+            fill: #AE3C00;
         }
     }
 }

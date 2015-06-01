@@ -3,19 +3,24 @@
 ---
 @charset "utf-8";
 
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400|Open+Sans:400,700);
 
+$roboto-slab: 'Droid Sans', serif;
+$open-sans: 'Open Sans', sans-serif;
 
 // Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-family: $open-sans;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
+$text-color:       #424242;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$brand-color:      #FEB062;
+
+$link-color: #FF3E00;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
