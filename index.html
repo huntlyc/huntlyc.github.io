@@ -8,7 +8,7 @@ layout: page
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h1>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        {{ post.excerpt }}
+        {{ post.excerpt }}... [<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">Read More</a>]
     {% endfor %}
 
    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
