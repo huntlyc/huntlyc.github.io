@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Placerctrl Ubuntu 14.04"
+title:  "Placerctrl Ubuntu 15.04"
 date:   2015-02-03 11:08:29
 categories: Ubuntu, i3
 ---
@@ -10,7 +10,7 @@ Volume wasn't a problem, but I wanted to use my pause, next, and prev keys as we
 
 ## Installation
 You'll need to install GTK-doc, gobject-introspection, and build-essentials to build Playerctrl
-```apt-get install gtk-doc-tools gobject-introspection build-essentials```
+```apt-get install gtk-doc-tools gobject-introspection build-essential libglib2.0-dev```
 
 After this is installed you can build Playerctrl
 
