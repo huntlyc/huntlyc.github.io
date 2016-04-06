@@ -18,3 +18,5 @@ But where's the fun in that???
 Then find the end of the section you wish and do the following command to delete until the end of the file:
 `.,$d`
 This tells vim for the range . (the current line) to $ (last line of file), delete.
+
+For more information about ranges check out [this guide](http://vim.wikia.com/wiki/Ranges).
