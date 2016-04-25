@@ -28,7 +28,15 @@ jQuery(window).load(function(){
               eventAction: jQuery(this).attr('data-network'),
               eventLabel: 'SocialLink'
         });
-    }); 
+    });
+    jQuery('a.licence-link').click(function(event){
+        ga('send', {
+              hitType: 'event',
+              eventCategory: 'LicenceLink',
+              eventAction: jQuery(this).attr('data-licence'),
+              eventLabel: 'LicenceLink'
+        });
+    });
 });
 
 jQuery.fn.parallax = function(strength) {
