@@ -24,17 +24,17 @@ jQuery(window).load(function(){
     jQuery('a.social-link').click(function(event){
         ga('send', {
               hitType: 'event',
-              eventCategory: 'SocialLink',
-              eventAction: jQuery(this).attr('data-network'),
-              eventLabel: 'SocialLink'
+              eventCategory: 'ExternalLink',
+              eventAction: 'SocialLink',
+              eventLabel: 'SocialLink - ' + jQuery(this).attr('data-network')
         });
     });
     jQuery('a.licence-link').click(function(event){
         ga('send', {
               hitType: 'event',
-              eventCategory: 'LicenceLink',
-              eventAction: jQuery(this).attr('data-licence'),
-              eventLabel: 'LicenceLink'
+              eventCategory: 'ExternalLink',
+              eventAction: 'LicenceLink',
+              eventLabel: 'LicenceLink - ' + jQuery(this).attr('data-licence')
         });
     });
 });
