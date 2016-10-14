@@ -1,16 +1,16 @@
 ---
-layout: page
+layout: default
 ---
-<div >
+{% for post in site.posts %}
+  <div class="container">
+    <aside class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</aside>
+    <article>
+      <h1 class="post-title">
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h1>
 
-    {% for post in site.posts %}
-        <h1 class="post-title">
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h1>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        {{ post.excerpt }}
-        <p><a href="{{ post.url | prepend: site.baseurl }}">Read More</a></p>
-    {% endfor %}
-
-   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-</div>
+      {{ post.excerpt }}
+      <p><a href="{{ post.url | prepend: site.baseurl }}">Read More</a></p>
+    </article>
+  </div>
+{% endfor %}
