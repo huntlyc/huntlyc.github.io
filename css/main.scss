@@ -5,100 +5,80 @@
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "jockstrap"
+"jockstrap",
+"sassygrid"
 ;
 
 header > h1 {
-	text-align: center;
-	margin: 0;
-	padding: 5rem 0;
-	// background: $highlight-color;
-	// background: radial-gradient( lighten($highlight-color, 10) , $highlight-color );
-	color: lighten($highlight-color, 40);
+    text-align: center;
+    margin: 0;
+    padding: 5rem 1rem;
+    background: $highlight-color;
+    background: radial-gradient( lighten($highlight-color, 10) , $highlight-color );
+    color: lighten($highlight-color, 80);
 }
 
-div.container{
-	padding-left: 2rem;
-	padding-right: 2rem;
-	margin: 0 auto;
 
-
-}
-div.container::before,
-div.container:after{
-  box-sizing: border-box;
-
-  content: " ";
-  display: table
+.post-title{
+    padding-bottom: 0.1rem;
+    border-bottom: 1px solid transparentize($highlight-color, 0.8);
 }
 
-div.container:after{
- clear: both;
+.post-meta{
+    font-size: 1rem;
+    color: transparentize($base-color, 0.2);
 }
 
-.container aside,
-.container article{
-  display: block;
-  float: left;
-}
 
-.container aside{
-  width: 15%;
-}
+footer{
+    .col{
+        padding-top: 1rem;
+    }
+    h6{
+        color: #fff;
+        margin-top: 0;
+        margin-bottom: 0.3rem;
+    }
 
-.container article{
-  width: 85%;
-}
-@media (max-width: 480px){
+    .social-media-list{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: left;
 
-  div.container{
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-}
 
-@media (min-width: 1200px){
+        li{
+            display: inline-block;
+            padding: 0 0.5rem;
 
-  div.container{
-		max-width: 55rem;
-	}
-}
+            &:first-child{
+                padding: 0 0.5rem 0 0;
+            }
 
-h1.post-title{
-  padding-bottom: 0.1rem;
-	border-bottom: 1px solid transparentize($highlight-color, 0.8);
-}
+            a{
 
-aside.post-meta{
-  font-size: 1rem;
-  color: transparentize($base-color, 0.2);
-}
+                .username{
+                    display: none;
+                }
 
-p.intro{
-	color: transparentize($base-color, 0.4);
-}
 
-.opensans{ font-family:'Open Sans', sans-serif; }
-.raleway{ font-family: 'Raleway', sans-serif; }
-.inconsolata{ font-family: 'Inconsolata', sans-serif; }
+                svg{
+                    width: 30px;
+                    height: 30px;
 
-.social-media-list{
-  list-style: none;
-}
 
-.social-media-list li{
-  display: inline-block;
-  padding: 1rem 0.5rem;
-}
+                    path{
+                        transition: fill 0.2s linear;
+                        fill: darken($highlight-color, 40);
+                    }
+                }
 
-.social-media-list svg{
-  width: 30px;
-  height: 30px;
-
-}
-.social-media-list svg path{
-  fill: darken($highlight-color, 40);
-}
-.social-media-list .username{
-  display: none;
+                &:hover{
+                    svg path{
+                        fill: darken($highlight-color, 20);
+                    }
+                }
+            }
+        }
+    }
 }

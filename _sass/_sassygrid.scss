@@ -1,0 +1,150 @@
+// Grid Vars
+$gutter: 40px !default;
+$max-width: 1170px !default;
+
+$breakpoints: (
+    sm: 480px,
+    md: 768px,
+    lg: 980px,
+    xl: 1024px,
+) !default;
+
+//Internal
+$minMaxWidth: min-width;
+
+
+
+// resets
+.container,
+.row,
+.col {
+	margin: 0;
+	padding: 0;
+  	box-sizing: border-box;
+}
+
+.container:before,
+.container:after,
+.row:before,
+.row:after,
+.col:before,
+.col:after {
+  box-sizing: border-box;
+}
+
+.container:before,
+.container:after,
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+
+.container:after,
+.row:after {
+  clear: both;
+}
+
+.container{
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.container--max-width{
+	max-width: $max-width;
+}
+
+.col,
+.row{
+    display: block;
+	width: 100%;
+}
+
+.col{
+    float: left;
+    padding-right: 40px
+}
+
+.row{
+    padding: 0 0 0 40px;
+}
+
+.row.row--no-gutters{
+    padding: 0;
+}
+
+.row.row--no-gutters .col{
+    padding-right: 0
+}
+
+
+.row > .col{
+    padding-right: $gutter;
+    padding-left: 0;
+}
+
+//If double padded, padd left and right by half gutter val
+.row--double-padded > .col{
+    padding-left: $gutter / 2;
+    padding-right: $gutter / 2;
+}
+
+//If double padded, padd left and right by half gutter val
+.row--no-gutters > .col{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+//Do XS first
+@for $denominator from 1 through 8{
+    @for $numerator from 1 through $denominator{
+        .col--xs-#{$numerator}-#{$denominator}{
+            @if $numerator == $denominator{
+                width: 100%;
+            } @else {
+                width: $numerator / $denominator * 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px){
+    .hidden-xs{
+        display: none
+    }
+}
+
+
+//Loop through breakpoints
+@each $screensize, $cuttoff in $breakpoints{
+    @media (min-width: $cuttoff){
+        @for $denominator from 1 through 8{
+            @for $numerator from 1 through $denominator{
+            	.col--#{$screensize}-#{$numerator}-#{$denominator}{
+            		@if $numerator == $denominator{
+                        width: 100%;
+                    } @else {
+                        width: $numerator / $denominator * 100%;
+                    }
+            	}
+            }
+        }
+
+        .hidden-#{$screensize}{
+            display: none;
+        }
+
+        .visible-xs,
+        .visible-sm,
+        .visible-md,
+        .visible-lg,
+        .visible-xl{
+            display: none !important;
+        }
+
+        .visible-#{$screensize}{
+            display: block !important;
+        }
+    }
+}
