@@ -63,11 +63,11 @@ $minMaxWidth: min-width;
 
 .col{
     float: left;
-    padding-right: 40px
+    padding-right: $gutter
 }
 
 .row{
-    padding: 0 0 0 40px;
+    padding: 0 0 0 $gutter;
 }
 
 .row.row--no-gutters{

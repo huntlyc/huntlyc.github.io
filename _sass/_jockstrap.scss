@@ -6,7 +6,9 @@
 $primary-font: 'Open Sans', sans-serif;
 $header-font: 'Raleway', sans-serif;
 $base-color: rgb(100,100,100);
-$highlight-color: rgb(122, 201, 255);
+//$highlight-color: rgb(122, 201, 255);
+$highlight-color: rgb(255, 150, 71);
+
 
 html, body {
 	height: 100%;
@@ -310,4 +312,11 @@ footer a:hover,
 footer a:focus,
 footer a:active{
 	color: #fff;
+}
+
+code{
+	padding: 0.2rem 0.6rem;
+	font-family: Inconsolata;
+	border: 1px solid $highlight-color;
+	background-color: transparentize($highlight-color, 0.8);
 }

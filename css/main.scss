@@ -10,14 +10,35 @@
 ;
 
 header > h1 {
+    padding: 10rem 1rem;
     text-align: center;
     margin: 0;
-    padding: 5rem 1rem;
-    background: $highlight-color;
-    background: radial-gradient( lighten($highlight-color, 10) , $highlight-color );
+    background: transparent url(../images/header.jpg) no-repeat center top;
+    background-attachment: fixed;
+    background-size: cover;
     color: lighten($highlight-color, 80);
+
 }
 
+.introduction{
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    border: 1px dotted $highlight-color;
+    background-color: transparentize($highlight-color, 0.7);
+}
+
+.introduction h1{
+    margin-top: 0
+}
+
+.container.front-article{
+    padding-bottom: 4rem
+}
+
+.container--page-wrap{
+    padding: 2rem 0px;
+}
 
 .post-title{
     padding-bottom: 0.1rem;
@@ -26,7 +47,13 @@ header > h1 {
 
 .post-meta{
     font-size: 1rem;
-    color: transparentize($base-color, 0.2);
+    color: transparentize($base-color, 0.4);
+}
+
+aside.post-meta{
+    padding-top: 1.8rem;
+    text-align: right;
+    color: transparentize($base-color, 0.6);
 }
 
 
@@ -80,5 +107,30 @@ footer{
                 }
             }
         }
+    }
+}
+
+@media (max-width: 480px){
+    header > h1 {
+        padding: 2rem 1rem;
+    }
+    aside.post-meta{
+        padding-top: 0;
+        text-align: left;
+    }
+
+
+    .col{
+        padding-right: 14px;
+    }
+
+    .row{
+        padding: 0 0 0 14px;
+    }
+
+
+    .row > .col{
+        padding-right: 14px;
+        padding-left: 0;
     }
 }
