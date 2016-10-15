@@ -3,7 +3,7 @@ var isMenuShown = false;
 jQuery(document).ready(function(){
     jQuery(window).on('scroll', function() {
         if(jQuery(window).outerWidth() > 400){
-            jQuery('.paralax-img').parallax(0.5);
+            jQuery('.paralax-img').parallax(0.3);
         }
     });
 
